@@ -19,7 +19,7 @@ architecture rtl of divider is
 			res : out std_logic_vector(N - 1 downto 0);
 			bout : out std_logic);
 	end component;
-	for all:select_subtractor use entity work.select_subtractor;
+	for all:select_subtractor use entity work.select_subtractor generic map (N);
 	
 	type collection is array (N - M + 1 downto 0) of std_logic_vector(N - 1 downto 0);
 
