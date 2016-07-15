@@ -1,3 +1,10 @@
+--------------------------------------------------------------------------------
+-- Author:        Iman Tabrizian (tabrizian@outlook.com)
+-- Author:        Parham Alvani (parham.alvani@gmail.com)
+--
+-- Create Date:   15-07-2016
+-- Module Name:   select_subtractor.vhd
+--------------------------------------------------------------------------------
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_signed.all;
@@ -8,8 +15,7 @@ entity select_subtractor is
 	port(a : in std_logic_vector(N - 1 downto 0);
 		b : in std_logic_vector(N - 1 downto 0);
 		res : out std_logic_vector(N - 1 downto 0);
-		bout : out std_logic
-        );
+		bout : out std_logic);
 end select_subtractor;
 
 architecture rtl of select_subtractor is
