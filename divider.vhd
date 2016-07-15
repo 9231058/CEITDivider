@@ -20,7 +20,7 @@ architecture gate_level of divider_eight is
 			bout : out std_logic);
 	end component;
 	for all:select_subtractor use entity work.select_subtractor;
-	
+
 	signal bout : std_logic_vector(N - M downto 0);
 	signal res : std_logic_vector(N - 1 downto 0);
 begin
@@ -29,6 +29,6 @@ begin
 		ss:select_subtractor port map(res , (I downto I - M + 1 => b, others => '0'), res, bout(I - M + 1));
 	end generate;
 
-    	r <= res(N - M - 1 downto 0);
-   	q <= not bout;
+	r <= res(N - M - 1 downto 0);
+	q <= not bout;
 end gate_level;
